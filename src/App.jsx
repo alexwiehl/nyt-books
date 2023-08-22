@@ -8,7 +8,7 @@ function App() {
 
   return (
     <main>
-      <section>
+      <section className="w-full h-[900px] bg-slate-500 flex justify-center ">
         <Search query={query} setQuery={setQuery} setResults={setResults} />
       </section>
       <section>{results && <SearchResults results={results} />}</section>

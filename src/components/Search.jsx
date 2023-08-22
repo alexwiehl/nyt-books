@@ -4,6 +4,20 @@ import Button from "./Button";
 const API_KEY = "C7iUqcQlOnOGdt6uyGR0hIUXweCxIMtP";
 
 function Search({ query, setQuery, results, setResults }) {
+  useEffect(() => {
+    async function fetchBooks() {
+      const res = await fetch(
+        `https://api.nytimes.com/svc/books/v3/lists/overview.json?published_date=${query}&api-key=${API_KEY}`
+      );
+
+      const data = await res.json();
+
+      setResults(data.results);
+    }
+
+    fetchBooks();
+  }, []);
+
   function handleSubmit(e) {
     e.preventDefault();
     console.log({ query });
@@ -16,13 +30,16 @@ function Search({ query, setQuery, results, setResults }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={handleSubmit}
+      className="flex-1 flex self-center justify-center mx-20"
+    >
       <input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search for a NYT Best Seller"
-        className="border border-black "
+        className="border border-black px-5 py-4 rounded-full w-full"
       ></input>
       <Button label="Search" />
     </form>

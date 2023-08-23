@@ -8,8 +8,10 @@ function App() {
 
   return (
     <main>
-      <section className="w-full h-[900px] bg-slate-500 flex justify-center ">
+      <section className="bg-cover bg-[url('public/yellowbookbg.jpg')] w-full h-screen bg-slate-500 flex justify-center hero-bg">
+        {/* <div className="bg-cover bg-[url('public/yellowbookbg.jpg')] max-w-screen-xl mb-20 mt-12 mx-20 rounded-[100px] z-0 relative"> */}
         <Search query={query} setQuery={setQuery} setResults={setResults} />
+        {/* </div> */}
       </section>
       <section>{results && <SearchResults results={results} />}</section>
     </main>

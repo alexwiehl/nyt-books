@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "hero-bg": "url('public/yellowbookbg.jpg')",
+      },
       fontFamily: {
         caldea: ["Caladea", "serif"],
         mono: ["Major Mono Display", "monospace"],

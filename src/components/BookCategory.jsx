@@ -99,13 +99,13 @@ function BookCategory({ category, index, children }) {
 
   return (
     <div
-      className="flex flex-col -mt-[100px] px-12 pb-[140px] pt-5 bg-red-200 rounded-t-[100px] max-w-screen-xl mx-auto"
+      className="flex flex-col pb-10 px-12 pt-5 bg-red-200  w-screen mx-auto"
       style={{
         backgroundColor: sectionColor,
         color: textColor,
       }}
     >
-      <div className="flex-1 self-center mt-10 mb-8 font-bold text-3xl ">
+      <div className="flex-1 self-center mt-10 mb-8 font-bold text-4xl font-alice">
         {category}
       </div>
       <div className="flex flex-row max-lg:flex-col flex-1 p-1 gap-2">

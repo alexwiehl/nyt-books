@@ -30,9 +30,11 @@ function BookCard({
             {description}
           </p>
         </div>
-        <button className="transition mx-4 mb-5 py-1 px-7 bg-white/80 hover:bg-white font-black text-black rounded-full font-alice self-start border border-black">
-          BUY
-        </button>
+        <a href={amazonURL}>
+          <button className="transition mx-4 mb-5 py-1 px-7 bg-white/80 hover:bg-white font-black text-black rounded-full font-alice self-start border border-black">
+            BUY
+          </button>
+        </a>
       </div>
     </div>
   );

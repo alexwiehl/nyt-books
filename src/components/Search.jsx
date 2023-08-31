@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const API_KEY = "C7iUqcQlOnOGdt6uyGR0hIUXweCxIMtP";
 
-function Search({ query, setQuery, results, setResults }) {
+function Search({ query, setQuery, results, setResults, currentDate }) {
   useEffect(() => {
     async function fetchBooks() {
       const res = await fetch(
@@ -26,7 +26,7 @@ function Search({ query, setQuery, results, setResults }) {
     )
       .then((response) => response.json())
       .then((data) => setResults(data.results));
-    setQuery("");
+    // setQuery("");
   }
 
   return (
@@ -35,7 +35,9 @@ function Search({ query, setQuery, results, setResults }) {
       className="flex-1 flex self-center justify-center mx-20"
     >
       <input
-        type="text"
+        type="date"
+        min="2009-01-01T00:00"
+        max={`${currentDate}T00:00`}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search for a NYT Best Seller"

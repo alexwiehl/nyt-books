@@ -32,7 +32,7 @@ function Search({ query, setQuery, results, setResults, currentDate }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex-1 flex self-center justify-center mx-20"
+      className="flex-1 flex self-center justify-center mx-20 "
     >
       <input
         type="date"
@@ -41,7 +41,7 @@ function Search({ query, setQuery, results, setResults, currentDate }) {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search for a NYT Best Seller"
-        className="border border-black px-5 py-4 rounded-full w-full"
+        className="border border-black px-5 py-4 rounded-full w-full min-w-[160px]"
       ></input>
       <Button label="Search" />
     </form>

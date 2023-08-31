@@ -30,21 +30,23 @@ function Search({ query, setQuery, results, setResults, currentDate }) {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex-1 flex self-center justify-center mx-20 "
-    >
-      <input
-        type="date"
-        min="2009-01-01T00:00"
-        max={`${currentDate}T00:00`}
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search for a NYT Best Seller"
-        className="border border-black px-5 py-4 rounded-full w-full min-w-[160px]"
-      ></input>
-      <Button label="Search" />
-    </form>
+    <div className="flex flex-1 justify-center">
+      <form
+        onSubmit={handleSubmit}
+        className="flex-1 flex justify-center mx-20 max-w-xl"
+      >
+        <input
+          type="date"
+          min="2009-01-01T00:00"
+          max={`${currentDate}T00:00`}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search for a NYT Best Seller"
+          className="border border-black px-5 py-4 rounded-full w-full min-w-[160px]"
+        ></input>
+        <Button label="Search" />
+      </form>
+    </div>
   );
 }
 

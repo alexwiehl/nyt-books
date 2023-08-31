@@ -99,7 +99,7 @@ function BookCategory({ category, index, children }) {
 
   return (
     <div
-      className="flex flex-col pb-10 px-12 pt-5 bg-red-200  w-screen mx-auto"
+      className="flex flex-col pb-10 px-12 pt-5 bg-red-200  w-screen mx-auto "
       style={{
         backgroundColor: sectionColor,
         color: textColor,

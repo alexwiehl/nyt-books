@@ -9,14 +9,14 @@ function BookCard({
   weeks,
 }) {
   return (
-    <div className="flex flex-col max-lg:flex-row flex-1 bg-white/0 rounded-[10px]  max-lg:items-center ">
+    <div className="flex flex-col max-lg:flex-row flex-1 bg-white/0 rounded-[10px]  max-lg:items-center transition-all ease-in-out">
       <p className="absolute  ml-[140px] max-lg:-mt-10 max-lg:-ml-7 text-[150px] text-white/20 z-0 font-alice font-black ">
         {rank}
       </p>
       <img
         src={image}
         alt={`cover of ${title} by ${author}`}
-        className="border border-black relative h-[200px] max-xl:h-[175px] max-lg:w-[110px] max-lg:h-auto max-md:w-[90px] max-md:h-auto max-sm:h-auto max-sm:w-[90px] ml-4 mb-5 p-3 max-lg:p-2 mt-7 max-lg:mt-1  bg-white rounded-[10px] z-10 self-start"
+        className="border border-black relative h-[200px] max-xl:h-[175px] max-lg:w-[110px] max-lg:h-auto max-md:w-[90px] max-md:h-auto max-sm:h-auto max-sm:w-[90px] ml-4 mb-5 p-3 max-lg:p-2 mt-7 max-lg:mt-1  bg-white rounded-[10px] z-10 self-start hover:-translate-y-2 transition-all ease-in-out duration-300"
       />
 
       <div className="flex flex-1 flex-col max-lg:flex-row max-md:flex-col justify-between items-start">
